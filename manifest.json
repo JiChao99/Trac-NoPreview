@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Trac-NoPreview",
+  "version": "1.0.0.0",
+  "description": "For Trac No Preview Submit",
+  "icons": {
+    "16": "images/trac16.png",
+    "32": "images/trac32.png",
+    "48": "images/trac48.png",
+    "128": "images/trac128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/trac16.png",
+      "32": "images/trac32.png",
+      "48": "images/trac48.png",
+      "128": "images/trac128.png"
+    },
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://xxx/trac/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "author": "Alec.Ji"
+}
